@@ -1,5 +1,21 @@
-Go to https://apricot-cupcake-90327.herokuapp.com to try out this web app.
+To provide a code snippet in a README file for running the application, you can use the following markdown format: 
 
-Note: might take a little time to load
+# Installation
+1. Clone the repository:
+   ```shell
+   git clone https://github.com/your-username/your-repository.git
 
-You can upload an image or a few images and select an art style that can be applied to this image.
+Navigate to the project directory:
+cd your-repository
+
+
+Install the dependencies:
+pip install -r requirements.txt
+
+
+Run the application:
+python app.py
+
+
+
+Copy the code snippet above and paste it into your README file. Make sure to replace `sumeetghumare4` and `ArtStyle-Fusion` with the appropriate values for your GitHub repository. This code snippet provides clear instructions on how to clone the repository, install the dependencies, and run the application.
