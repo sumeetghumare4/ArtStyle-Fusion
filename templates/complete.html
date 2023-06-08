@@ -1,20 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Title</title>
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-image: url("background.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    img {
+      max-width: 300px;
+      margin: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+  </style>
 </head>
 <body>
-	Upload complete!
-	
-	{% for image_name in image_names %}
-		<div>
-			<img src="{{url_for('send_processed_image', filename=image_name, selected_style=selected_style)}}">
-			<img src="{{url_for('send_original_image', filename=image_name)}}">
-		</div>
-	{% endfor %}
+  <div class="container">
+    <h1>Upload complete!</h1>
 
-</body>
+    {% for image_name in image_names %}
+    <div class="image-container">
+      <img src="{{url_for('send_processed_image', filename=image_name, selected_style=selected_style)}}" alt="Processed Image">
+      <img src="{{url_for('send_original_image', filename=image_name)}}" alt="Original Image">
+    </div>
+    {% endfor %}
+  </div>
 </body>
 </html>
